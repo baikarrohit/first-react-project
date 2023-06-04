@@ -2,6 +2,7 @@ import FormInput from "./components/Users/FormInput";
 import "./App.css";
 import UserList from "./components/Users/UserList";
 import { useState } from "react";
+import { Fragment } from "react";
 
 function App() {
   const [usersList, setUsersList] = useState([]);
@@ -14,11 +15,12 @@ function App() {
     });
   };
   return (
-    <div className="App">
+    <Fragment className="App">
       <FormInput onFormSubmit={formSubmitHanlder} />
       <UserList users={usersList} />
-    </div>
+    </Fragment>
   );
 }
 
 export default App;
+
