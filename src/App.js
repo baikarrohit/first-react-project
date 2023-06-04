@@ -6,11 +6,11 @@ import { Fragment } from "react";
 
 function App() {
   const [usersList, setUsersList] = useState([]);
-  const formSubmitHanlder = (uName, uAge) => {
+  const formSubmitHanlder = (uName, uAge, cName) => {
     setUsersList((prevUsersList) => {
       return [
         ...prevUsersList,
-        { name: uName, age: uAge, id: Math.random().toString() },
+        { name: uName, age: uAge, clgName: cName, id: Math.random().toString() },
       ];
     });
   };
